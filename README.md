@@ -1,3 +1,7 @@
 # 5 AR GAMES
-![](https://github.com/DushaHrusha/AR-game/main/Photo/photo_2024-11-05_16-10-51 (2).jpg)
-![](https://github.com/DushaHrusha/AR-game/Photo/photo_2024-11-05_16-10-51 (2).jpg)
+
+<img src="https://github.com/DushaHrusha/AR-game/raw/main/Photo/1 game.jpg" width="300">
+<img src="https://github.com/DushaHrusha/AR-game/raw/main/Photo/2 game.jpg" width="300">
+<img src="https://github.com/DushaHrusha/AR-game/raw/main/Photo/3 game.jpg" width="300">
+<img src="https://github.com/DushaHrusha/AR-game/raw/main/Photo/4 game.jpg" width="300">
+<img src="https://github.com/DushaHrusha/AR-game/raw/main/Photo/5 game.jpg" width="300">
