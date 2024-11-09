@@ -1,34 +1,39 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Burger : MonoBehaviour
 {
-    public GameObject Bread;
-
     public GameObject WinPanel;
-    public TMP_Text level;
-    static int i = 5;
+    public GameObject EndPanel;
+
+    public Image[] spritesBurger;
+    public int i = 5;
     
     void Start()
     {
         WinPanel.SetActive(false);
-        level.text = i.ToString();
+        EndPanel.SetActive(false) ;
     }
-
-    void OnTriggerEnter(Collider other)
+    
+    public void GetPanel()
     {
-        if (other.tag == "Player")
+        i--;
+        spritesBurger[i].color = new Color(255, 255, 255, 255);
+        if (i <= 0)
         {
-            transform.gameObject.SetActive(false);
-            i--;
-            level.text = i.ToString();
-
-            if (i == 0)
-            {
-                WinPanel.SetActive(true);
-            }
+            EndPanel.SetActive(true) ;
         }
+        StartCoroutine(panelTimer());
+
     }
+
+    IEnumerator panelTimer()
+    {
+        WinPanel.SetActive(true);
+        yield return new WaitForSeconds(3);
+        WinPanel.SetActive(false);
+        StopCoroutine(panelTimer());
+    }
+    
 }

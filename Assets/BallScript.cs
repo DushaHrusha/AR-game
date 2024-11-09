@@ -6,6 +6,6 @@ public class BallScript : MonoBehaviour
 {
     private void Update() 
     {
-        transform.Translate(Vector3.up * Time.deltaTime * 0.2f);
+        transform.Translate(Vector3.up * Time.deltaTime * 2f);
     }
 }

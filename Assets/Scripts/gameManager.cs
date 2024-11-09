@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class gameManager : MonoBehaviour {
 
+	public Burger burger;
 	public Sprite[] cardFace;
 	public Sprite cardBack;
 	public GameObject[] cards;
@@ -75,7 +76,10 @@ public class gameManager : MonoBehaviour {
 			x = 2;
 			_matches--;
 			if (_matches == 0)
+			{
 				gameTime.GetComponent<timeScript> ().endGame ();
+				burger.GetPanel();
+			}
 		}
 
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
@@ -14,15 +13,19 @@ public class SpawnScript : MonoBehaviour
 
     public void StopGame()
     {
-        StopCoroutine(StartSpawnig());
+        StopAllCoroutines();
     }
+    
     IEnumerator StartSpawnig()
     {
-        yield return new WaitForSeconds(4f);
-        for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 4; j++)
         {
-            Instantiate(ball[i], spawnPointer[i].position, Quaternion.identity);
+            yield return new WaitForSeconds(3f);
+            for (int i = 0; i < 3; i++)
+            {
+                Instantiate(ball[i], spawnPointer[i].position, Quaternion.identity);
+            }
         }
-        StartCoroutine(StartSpawnig());
+        
     }
 }
